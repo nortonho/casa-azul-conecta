@@ -3,7 +3,7 @@
 Site para organizar intenções de doação de alimentos, roupas e itens de higiene em Brasília, DF. Projeto da Atividade Extensionista II (Análise e Desenvolvimento de Sistemas, UNINTER).
 
 - **Autor:** Norton de Assis Montalvão (RU 4111565)
-- **Site:** [link do GitHub Pages]
+- **Site:** https://nortonho.github.io/casa-azul-conecta/
 - **ODS:** 1, 2 e 10
 
 ## Como funciona
