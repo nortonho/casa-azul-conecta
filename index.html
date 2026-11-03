@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Plataforma para organizar intenções de doação de alimentos, roupas e itens de higiene em Brasília, DF" />
+  <title>Casa Azul Conecta | Doações que chegam</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Casa Azul Conecta, início">
+      <span class="brand-mark" aria-hidden="true">⌂</span>
+      <span>Casa Azul <b>Conecta</b></span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="#campanhas">Campanhas</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#impacto">Impacto</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="access-button" id="contrast-toggle" type="button" aria-pressed="false">Alto contraste</button>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Brasília, DF · tecnologia a serviço da solidariedade</p>
+        <h1 id="hero-title">Uma doação simples pode mudar o dia de uma família.</h1>
+        <p class="hero-text">Escolha uma campanha, informe o que pode doar e registre sua intenção em poucos passos.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#campanhas">Ver necessidades</a>
+          <button class="button button-secondary" type="button" data-open-modal>Quero fazer uma doação</button>
+        </div>
+        <ul class="hero-notes" aria-label="Benefícios da plataforma">
+          <li>Informações claras</li>
+          <li>Uso simples no celular</li>
+          <li>Contato organizado</li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="house"><span></span><i></i><b></b></div>
+        <div class="ground"></div>
+        <div class="leaf leaf-one"></div>
+        <div class="leaf leaf-two"></div>
+        <div class="leaf leaf-three"></div>
+        <p>doar aproxima</p>
+      </div>
+    </section>
+
+    <section class="section campaigns" id="campanhas" aria-labelledby="campaign-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Campanhas</p>
+          <h2 id="campaign-title">Escolha uma campanha</h2>
+        </div>
+        <label class="filter-label" for="campaign-filter">Filtrar por categoria
+          <select id="campaign-filter">
+            <option value="todas">Todas as campanhas</option>
+            <option value="alimentos">Alimentos</option>
+            <option value="vestuario">Vestuário</option>
+            <option value="higiene">Higiene</option>
+          </select>
+        </label>
+      </div>
+      <div class="campaign-grid" id="campaign-grid">
+        <article class="campaign-card" data-category="alimentos">
+          <div class="card-icon food" aria-hidden="true">⌇</div>
+          <p class="tag">Alimentos</p>
+          <h3>Cesta essencial</h3>
+          <p>Arroz, feijão, macarrão, óleo, leite e itens não perecíveis para compor cestas familiares.</p>
+          <button class="text-button" type="button" data-campaign="Cesta essencial" data-open-modal>Doar para esta
+            campanha <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="campaign-card" data-category="vestuario">
+          <div class="card-icon clothes" aria-hidden="true">♧</div>
+          <p class="tag">Vestuário</p>
+          <h3>Roupas para todas as idades</h3>
+          <p>Peças limpas e em bom estado, principalmente roupas infantis, casacos e calçados.</p>
+          <button class="text-button" type="button" data-campaign="Roupas para todas as idades" data-open-modal>Doar
+            para esta campanha <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="campaign-card" data-category="higiene">
+          <div class="card-icon hygiene" aria-hidden="true">✦</div>
+          <p class="tag">Higiene</p>
+          <h3>Kit de cuidado diário</h3>
+          <p>Sabonete, pasta de dente, absorventes, fraldas e produtos de higiene pessoal.</p>
+          <button class="text-button" type="button" data-campaign="Kit de cuidado diário" data-open-modal>Doar para esta
+            campanha <span aria-hidden="true">→</span></button>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>Nenhuma campanha encontrada para este filtro.</p>
+    </section>
+
+    <section class="section steps" id="como-funciona" aria-labelledby="steps-title">
+      <p class="eyebrow">Sem complicação</p>
+      <h2 id="steps-title">Como a plataforma organiza a sua doação</h2>
+      <ol>
+        <li><span>1</span>
+          <h3>Veja a necessidade</h3>
+          <p>As campanhas mostram os itens prioritários.</p>
+        </li>
+        <li><span>2</span>
+          <h3>Registre a intenção</h3>
+          <p>Informe o item e a forma de contato preferida.</p>
+        </li>
+        <li><span>3</span>
+          <h3>Combine a entrega</h3>
+          <p>O responsável pelo projeto entra em contato para combinar a entrega.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section impact" id="impacto" aria-labelledby="impact-title">
+      <div>
+        <p class="eyebrow">Por que este projeto existe</p>
+        <h2 id="impact-title">Organizar a solidariedade também é inclusão digital.</h2>
+      </div>
+      <div class="impact-copy">
+        <p>O site transforma uma lista dispersa de necessidades em um caminho acessível para doadores e para quem
+          organiza as entregas.</p>
+        <a class="text-button" href="#campanhas">Conhecer as campanhas <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contato" aria-labelledby="contact-title">
+      <p class="eyebrow">Contato e entrega</p>
+      <h2 id="contact-title">Como combinar a entrega</h2>
+      <ul class="contact-list">
+        <li><strong>Responsável pelo projeto:</strong> Norton de Assis Montalvão</li>
+        <li><strong>WhatsApp:</strong> (61) 98596-3940</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">⌂</span><span>Casa Azul
+          <b>Conecta</b></span></a>
+    </div>
+    <p>Desenvolvido por Norton de Assis Montalvão<br />CST em Análise e Desenvolvimento de Sistemas</p>
+  </footer>
+
+  <dialog class="donation-dialog" id="donation-dialog" aria-labelledby="dialog-title">
+    <button class="close-dialog" type="button" aria-label="Fechar formulário">×</button>
+    <p class="eyebrow">Intenção de doação</p>
+    <h2 id="dialog-title">Vamos organizar sua contribuição</h2>
+    <p id="dialog-context">Preencha somente o necessário. Seus dados serão usados apenas para combinar a entrega desta
+      doação.</p>
+    <form id="donation-form">
+      <label for="donor-name">Seu nome <span aria-hidden="true">*</span></label>
+      <input id="donor-name" name="name" autocomplete="name" required />
+      <label for="donor-contact">WhatsApp ou e-mail <span aria-hidden="true">*</span></label>
+      <input id="donor-contact" name="contact" autocomplete="email" required />
+      <label for="donation-item">O que você deseja doar? <span aria-hidden="true">*</span></label>
+      <input id="donation-item" name="item" placeholder="Ex.: 2 pacotes de arroz" required />
+      <label for="campaign-name">Campanha <span aria-hidden="true">*</span></label>
+      <select id="campaign-name" name="campaign" required>
+        <option value="">Selecione</option>
+        <option>Cesta essencial</option>
+        <option>Roupas para todas as idades</option>
+        <option>Kit de cuidado diário</option>
+      </select>
+      <label class="check-label"><input type="checkbox" required /> Autorizo o projeto Casa Azul Conecta a usar meu
+        contato somente para combinar a entrega desta doação.</label>
+      <small class="privacy-note">Seus dados são usados apenas para combinar a entrega desta doação e ficam acessíveis
+        somente ao responsável pelo projeto.</small>
+      <button class="button button-primary" type="submit">Registrar intenção</button>
+    </form>
+    <button class="button button-primary" type="submit">Registrar intenção</button>
+    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSf0HUhjG0f_kJt8cSsy22pPxM_lpbFMQHD4hxool8umcv7WQg/viewform"
+        target="_blank" rel="noopener">Prefere preencher direto no Google Forms?</a></p>
+    </form>
+    <div class="form-success" id="form-success" hidden tabindex="-1"><span aria-hidden="true">✓</span>
+      <h3>Intenção registrada</h3>
+      <p>Recebemos sua intenção de doação. Entraremos em contato pelo meio informado para combinar a entrega.</p><button
+        class="button button-secondary" type="button" data-close-success>Voltar às
+        campanhas</button>
+    </div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+
+</html>
