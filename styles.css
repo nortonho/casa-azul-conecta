@@ -126,7 +126,7 @@ nav a:hover {
     min-height: 570px;
     padding: 4rem clamp(1.25rem, 9vw, 9rem);
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(310px, .9fr);
+    grid-template-columns: 1fr;
     align-items: center;
     gap: 4rem;
     background: linear-gradient(105deg, #e4f6f4 0%, #e4f6f4 58%, #c8e7ea 58%);
@@ -794,4 +794,9 @@ body.high-contrast .brand-mark {
 
 .contact-list strong {
     color: var(--ink);
+}
+
+/* Mantém a navegação fixa na mesma posição ao ativar o alto contraste */
+body.high-contrast .site-header nav {
+    margin-left: auto;
 }
