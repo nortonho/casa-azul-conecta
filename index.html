@@ -70,7 +70,6 @@
       </div>
       <div class="campaign-grid" id="campaign-grid">
         <article class="campaign-card" data-category="alimentos">
-          <div class="card-icon food" aria-hidden="true">⌇</div>
           <p class="tag">Alimentos</p>
           <h3>Cesta essencial</h3>
           <p>Arroz, feijão, macarrão, óleo, leite e itens não perecíveis para compor cestas familiares.</p>
@@ -78,7 +77,6 @@
             campanha <span aria-hidden="true">→</span></button>
         </article>
         <article class="campaign-card" data-category="vestuario">
-          <div class="card-icon clothes" aria-hidden="true">♧</div>
           <p class="tag">Vestuário</p>
           <h3>Roupas para todas as idades</h3>
           <p>Peças limpas e em bom estado, principalmente roupas infantis, casacos e calçados.</p>
@@ -86,7 +84,6 @@
             para esta campanha <span aria-hidden="true">→</span></button>
         </article>
         <article class="campaign-card" data-category="higiene">
-          <div class="card-icon hygiene" aria-hidden="true">✦</div>
           <p class="tag">Higiene</p>
           <h3>Kit de cuidado diário</h3>
           <p>Sabonete, pasta de dente, absorventes, fraldas e produtos de higiene pessoal.</p>
@@ -151,13 +148,19 @@
     <h2 id="dialog-title">Vamos organizar sua contribuição</h2>
     <p id="dialog-context">Preencha somente o necessário. Seus dados serão usados apenas para combinar a entrega desta
       doação.</p>
+
     <form id="donation-form">
+
       <label for="donor-name">Seu nome <span aria-hidden="true">*</span></label>
-      <input id="donor-name" name="name" autocomplete="name" required />
-      <label for="donor-contact">WhatsApp ou e-mail <span aria-hidden="true">*</span></label>
-      <input id="donor-contact" name="contact" autocomplete="email" required />
+      <input id="donor-name" name="name" autocomplete="name" required minlength="3" placeholder="Seu nome completo" />
+
+      <label for="donor-contact">WhatsApp <span aria-hidden="true">*</span></label>
+      <input id="donor-contact" name="contact" type="tel" inputmode="tel" autocomplete="tel" required maxlength="15"
+        placeholder="(61) 99999-0000" />
+
       <label for="donation-item">O que você deseja doar? <span aria-hidden="true">*</span></label>
-      <input id="donation-item" name="item" placeholder="Ex.: 2 pacotes de arroz" required />
+      <input id="donation-item" name="item" placeholder="Ex.: 2 pacotes de arroz" required minlength="3" />
+
       <label for="campaign-name">Campanha <span aria-hidden="true">*</span></label>
       <select id="campaign-name" name="campaign" required>
         <option value="">Selecione</option>
@@ -165,23 +168,31 @@
         <option>Roupas para todas as idades</option>
         <option>Kit de cuidado diário</option>
       </select>
-      <label class="check-label"><input type="checkbox" required /> Autorizo o projeto Casa Azul Conecta a usar meu
-        contato somente para combinar a entrega desta doação.</label>
+
+      <label class="check-label">
+        <input type="checkbox" required /> Autorizo o projeto Casa Azul Conecta a usar meu contato somente para combinar
+        a entrega desta doação.
+      </label>
+
       <small class="privacy-note">Seus dados são usados apenas para combinar a entrega desta doação e ficam acessíveis
         somente ao responsável pelo projeto.</small>
+
       <button class="button button-primary" type="submit">Registrar intenção</button>
     </form>
-    <button class="button button-primary" type="submit">Registrar intenção</button>
-    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSf0HUhjG0f_kJt8cSsy22pPxM_lpbFMQHD4hxool8umcv7WQg/viewform"
-        target="_blank" rel="noopener">Prefere preencher direto no Google Forms?</a></p>
-    </form>
-    <div class="form-success" id="form-success" hidden tabindex="-1"><span aria-hidden="true">✓</span>
+
+    <p style="margin-top: 1rem; text-align: center;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0HUhjG0f_kJt8cSsy22pPxM_lpbFMQHD4hxool8umcv7WQg/viewform"
+        target="_blank" rel="noopener">Prefere preencher direto no Google Forms?</a>
+    </p>
+
+    <div class="form-success" id="form-success" hidden tabindex="-1">
+      <span aria-hidden="true">✓</span>
       <h3>Intenção registrada</h3>
-      <p>Recebemos sua intenção de doação. Entraremos em contato pelo meio informado para combinar a entrega.</p><button
-        class="button button-secondary" type="button" data-close-success>Voltar às
-        campanhas</button>
+      <p>Recebemos sua intenção de doação. Entraremos em contato pelo meio informado para combinar a entrega.</p>
+      <button class="button button-secondary" type="button" data-close-success>Voltar às campanhas</button>
     </div>
   </dialog>
+
   <script src="app.js"></script>
 </body>
 

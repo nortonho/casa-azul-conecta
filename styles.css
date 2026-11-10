@@ -372,7 +372,7 @@ nav a:hover {
 .campaign-card {
     display: flex;
     flex-direction: column;
-    min-height: 350px;
+    min-height: 260px;
     padding: 1.55rem;
     background: var(--white);
     border: 1px solid var(--line);
@@ -385,29 +385,6 @@ nav a:hover {
 
 .campaign-card .text-button {
     margin-top: auto;
-}
-
-.card-icon {
-    display: grid;
-    place-items: center;
-    width: 45px;
-    height: 45px;
-    margin-bottom: 1.25rem;
-    border-radius: .6rem;
-    color: var(--blue-dark);
-    font-size: 1.7rem;
-}
-
-.food {
-    background: #fce9c7;
-}
-
-.clothes {
-    background: #dceefa;
-}
-
-.hygiene {
-    background: #e2f3e7;
 }
 
 .tag {
