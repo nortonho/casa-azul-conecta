@@ -144,47 +144,51 @@
 
   <dialog class="donation-dialog" id="donation-dialog" aria-labelledby="dialog-title">
     <button class="close-dialog" type="button" aria-label="Fechar formulário">×</button>
-    <p class="eyebrow">Intenção de doação</p>
-    <h2 id="dialog-title">Vamos organizar sua contribuição</h2>
-    <p id="dialog-context">Preencha somente o necessário. Seus dados serão usados apenas para combinar a entrega desta
-      doação.</p>
 
-    <form id="donation-form">
+    <!-- Container que agrupa tudo o que pertence ao preenchimento -->
+    <div id="form-container">
+      <p class="eyebrow">Intenção de doação</p>
+      <h2 id="dialog-title">Vamos organizar sua contribuição</h2>
+      <p id="dialog-context">Preencha somente o necessário. Seus dados serão usados apenas para combinar a entrega desta
+        doação.</p>
 
-      <label for="donor-name">Seu nome <span aria-hidden="true">*</span></label>
-      <input id="donor-name" name="name" autocomplete="name" required minlength="3" placeholder="Seu nome completo" />
+      <form id="donation-form">
+        <label for="donor-name">Seu nome <span aria-hidden="true">*</span></label>
+        <input id="donor-name" name="name" autocomplete="name" required minlength="3" placeholder="Seu nome completo" />
 
-      <label for="donor-contact">WhatsApp <span aria-hidden="true">*</span></label>
-      <input id="donor-contact" name="contact" type="tel" inputmode="tel" autocomplete="tel" required maxlength="15"
-        placeholder="(61) 99999-0000" />
+        <label for="donor-contact">WhatsApp <span aria-hidden="true">*</span></label>
+        <input id="donor-contact" name="contact" type="tel" inputmode="tel" autocomplete="tel" required maxlength="15"
+          placeholder="(61) 99999-0000" />
 
-      <label for="donation-item">O que você deseja doar? <span aria-hidden="true">*</span></label>
-      <input id="donation-item" name="item" placeholder="Ex.: 2 pacotes de arroz" required minlength="3" />
+        <label for="donation-item">O que você deseja doar? <span aria-hidden="true">*</span></label>
+        <input id="donation-item" name="item" placeholder="Ex.: 2 pacotes de arroz" required minlength="3" />
 
-      <label for="campaign-name">Campanha <span aria-hidden="true">*</span></label>
-      <select id="campaign-name" name="campaign" required>
-        <option value="">Selecione</option>
-        <option>Cesta essencial</option>
-        <option>Roupas para todas as idades</option>
-        <option>Kit de cuidado diário</option>
-      </select>
+        <label for="campaign-name">Campanha <span aria-hidden="true">*</span></label>
+        <select id="campaign-name" name="campaign" required>
+          <option value="">Selecione</option>
+          <option>Cesta essencial</option>
+          <option>Roupas para todas as idades</option>
+          <option>Kit de cuidado diário</option>
+        </select>
 
-      <label class="check-label">
-        <input type="checkbox" required /> Autorizo o projeto Casa Azul Conecta a usar meu contato somente para combinar
-        a entrega desta doação.
-      </label>
+        <label class="check-label">
+          <input type="checkbox" required /> Autorizo o projeto Casa Azul Conecta a usar meu contato somente para
+          combinar a entrega desta doação.
+        </label>
 
-      <small class="privacy-note">Seus dados são usados apenas para combinar a entrega desta doação e ficam acessíveis
-        somente ao responsável pelo projeto.</small>
+        <small class="privacy-note">Seus dados são usados apenas para combinar a entrega desta doação e ficam acessíveis
+          somente ao responsável pelo projeto.</small>
 
-      <button class="button button-primary" type="submit">Registrar intenção</button>
-    </form>
+        <button class="button button-primary" type="submit">Registrar intenção</button>
+      </form>
 
-    <p style="margin-top: 1rem; text-align: center;">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0HUhjG0f_kJt8cSsy22pPxM_lpbFMQHD4hxool8umcv7WQg/viewform"
-        target="_blank" rel="noopener">Prefere preencher direto no Google Forms?</a>
-    </p>
+      <p style="margin-top: 1rem; text-align: center;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0HUhjG0f_kJt8cSsy22pPxM_lpbFMQHD4hxool8umcv7WQg/viewform"
+          target="_blank" rel="noopener">Prefere preencher direto no Google Forms?</a>
+      </p>
+    </div>
 
+    <!-- Mensagem de sucesso (permanece separada) -->
     <div class="form-success" id="form-success" hidden tabindex="-1">
       <span aria-hidden="true">✓</span>
       <h3>Intenção registrada</h3>

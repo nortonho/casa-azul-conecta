@@ -1,4 +1,5 @@
 const dialog = document.querySelector('#donation-dialog');
+const formContainer = document.querySelector('#form-container');
 const form = document.querySelector('#donation-form');
 const campaignField = document.querySelector('#campaign-name');
 const context = document.querySelector('#dialog-context');
@@ -7,7 +8,7 @@ const closeDialog = document.querySelector('.close-dialog');
 const contactInput = document.querySelector('#donor-contact');
 
 function openDonation(campaign = '') {
-  form.hidden = false;
+  formContainer.hidden = false;
   success.hidden = true;
   form.reset();
   form.querySelector('[type="submit"]').disabled = false;
@@ -87,8 +88,8 @@ form.addEventListener('submit', async (event) => {
 
   try {
     await fetch(FORM_URL, { method: 'POST', mode: 'no-cors', body });
-    form.hidden = true; 
-    success.hidden = false; 
+    formContainer.hidden = true; // Oculta o título, textos, formulário e link do Google Forms de uma vez
+    success.hidden = false;       // Exibe a tela limpa de sucesso
     success.focus();
   } catch {
     alert('Não foi possível enviar. Verifique sua conexão e tente novamente.');
