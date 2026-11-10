@@ -796,7 +796,26 @@ body.high-contrast .brand-mark {
     color: var(--ink);
 }
 
-/* Mantém a navegação fixa na mesma posição ao ativar o alto contraste */
-body.high-contrast .site-header nav {
-    margin-left: auto;
+body.high-contrast {
+    --ink: #000;
+    --muted: #171717;
+    --blue: #003fbb;
+    --blue-dark: #001b62;
+    --aqua: #fff;
+    --cream: #fff;
+    --line: #000;
+    --white: #fff;
+    --accent: #b30000;
+}
+
+body.high-contrast .site-header {
+    background: #fff;
+}
+
+body.high-contrast nav a {
+    color: #000;
+}
+
+body.high-contrast nav a:hover {
+    color: var(--blue);
 }
