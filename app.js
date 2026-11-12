@@ -15,7 +15,7 @@ function openDonation(campaign = '') {
   campaignField.value = campaign;
   context.textContent = campaign
     ? `Você selecionou a campanha “${campaign}”. Preencha somente o necessário.`
-    : 'Preencha somente o necessário. Seus dados serão usados apenas para combinar a entrega desta doação.'; 
+    : 'Preencha somente o necessário. Seus dados serão usados apenas para combinar a entrega desta doação.';
   dialog.showModal();
   document.querySelector('#donor-name').focus();
 }

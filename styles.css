@@ -120,6 +120,7 @@ nav a:hover {
     background: transparent;
     padding: .48rem .82rem;
     font-size: .8rem;
+    min-width: 9rem;
 }
 
 .hero {
@@ -756,6 +757,7 @@ body.high-contrast .brand-mark {
 @media (max-width:460px) {
     .access-button {
         font-size: .7rem;
+        min-width: 7.5rem;
     }
 
     .hero h1 {
